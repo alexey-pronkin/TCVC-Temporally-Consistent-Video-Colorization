@@ -48,7 +48,7 @@ RUN conda create -n tcvc python=3.7 -y
 RUN echo "conda activate tcvc" > ~/.bashrc
 RUN conda run -n tcvc conda install -y pytorch==1.2.0 torchvision==0.4.0 cudatoolkit=10.0 -c pytorch && \
     conda clean -ya
-RUN conda run -n tcvc python -m pip install opencv-python
+RUN conda run -n tcvc python -m pip install opencv-python scikit-image matplotlib scipy pyyaml
 COPY . .
 USER root
 RUN sudo chmod -R 777 codes
@@ -62,5 +62,3 @@ cd ../../../../../
 RUN cd codes/models/archs/networks/resample2d_package/ && \
 conda run -n tcvc python setup.py develop && \
 cd ../../../../../
-RUN conda run -n tcvc conda install -y pytorch==1.2.0 torchvision==0.4.0 cudatoolkit=10.0 -c pytorch && \
-    conda clean -ya
