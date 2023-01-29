@@ -32,6 +32,14 @@ We also provide a video demo, which can help vividly compare different methods.
 The proposed TCVC framework (take N=4 for example). The anchor frame branch colorizes the two anchor frames and extracts the deep features for propagation. With bidirectional deep feature propagation, the internal frame features are all generated from anchor frames, which ensures the temporal consistency in high-dimensional feature space.
 
 ## Preparation
+### Docker
+- install docker via official instruction: https://docs.docker.com/engine/install/
+- install nvidia plugin for docker https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html 
+- copy this repository
+- build the docker container:
+```bash
+$ (sudo) docker build . -t docker-tcvc:latest
+```
 ### Dependencies
 - Python >= 3.6
 - Tested on PyTorch==1.2.0 (may work for other versions)
