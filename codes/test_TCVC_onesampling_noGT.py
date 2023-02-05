@@ -133,7 +133,7 @@ def main():
     # configurations
     #################
     device = torch.device("cuda")
-    os.environ["CUDA_VISIBLE_DEVICES"] = "6"
+    # os.environ["CUDA_VISIBLE_DEVICES"] = "6"
     
     data_mode = "Real" 
     key_net = "IDC"
@@ -142,12 +142,12 @@ def main():
     
     model_path = "../experiments/TCVC_IDC/models/80000_G.pth"  
 
-    interval_length = 17
+    interval_length = 1
     
     # specify the input folder and the output folder
-    Input_dataset_folder = "/data2/yhliu/old_film"
+    Input_dataset_folder = "test/"
     
-    save_folder = "../results/TCVC_{}_interlen{}_output".format(key_net, interval_length)
+    save_folder = "test/results/TCVC_{}_interlen{}_output".format(key_net, interval_length)
     
 
     # specify key net
