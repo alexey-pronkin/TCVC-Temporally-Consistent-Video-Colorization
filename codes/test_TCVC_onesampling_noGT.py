@@ -147,7 +147,7 @@ def main():
     # specify the input folder and the output folder
     Input_dataset_folder = "test/"
     
-    save_folder = "results/TCVC_{}_interlen{}_output".format(key_net, interval_length)
+    save_folder = "../results/TCVC_{}_interlen{}_output".format(key_net, interval_length)
     
 
     # specify key net
